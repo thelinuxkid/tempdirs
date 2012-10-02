@@ -18,4 +18,5 @@ setup(
     maintainer_email='andres@thelinuxkid.com',
     url='https://github.com/andresburitica/tempdirs',
     packages = find_packages(),
+    py_modules=['tempdirs'],
 )
