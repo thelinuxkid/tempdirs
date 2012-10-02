@@ -14,8 +14,8 @@ Installation
 
 You can use pip or easy_install
 
-- pip install pygeocode
-- easy_install pygeocode
+- pip install tempdirs
+- easy_install tempdirs
 
 Examples
 ========
