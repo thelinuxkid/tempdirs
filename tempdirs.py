@@ -3,7 +3,7 @@ import tempfile
 import shutil
 
 class makedirs(object):
-    def __init__(self, num):
+    def __init__(self, num=1):
         self._num = num
 
     def __call__(self, fn):
