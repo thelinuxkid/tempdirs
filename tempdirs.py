@@ -16,8 +16,8 @@ class makedirs(object):
                         for i in xrange(self._num)
                         ]
                     extra_args = list(args)
-                    extra_args += dirs
-                    fn(*extra_args, **kwargs)
+                    dirs += extra_args
+                    fn(*dirs, **kwargs)
                 finally:
                     for dir_ in dirs:
                         try:
