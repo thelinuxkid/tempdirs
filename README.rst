@@ -49,3 +49,46 @@ You can also use tempdirs.makedirs as a Context Manager::
             fp.write('src content\n')
         with open(dstfile, 'w') as fp:
             fp.write('dst content\n')
+
+Developing
+==========
+
+External dependencies
+---------------------
+
+    - python-dev
+    - python-setuptools
+    - python-virtualenv
+
+Setup
+-----
+
+To start developing run the following commands from the project's base
+directory. You can download the source from
+https://github.com/thelinuxkid/tempdirs::
+
+    # I like to install the virtual environment in its own
+    # hidden repo but you don't have to
+    virtualenv .virtual
+    # I leave the magic to Ruby developers (.virtual/bin/activate)
+    # but you don't have to agree with me
+    .virtual/bin/python setup.py develop
+    # Install the testing dependecies. Pip doesn't seem to handle
+    # extras_require yet: https://github.com/pypa/pip/issues/7.
+    # So, use easy_install.
+    # At this point, tempdirs will already be in easy-install.pth.
+    # So easy_install will not attempt to download it
+    .virtual/bin/easy_install tempdirs[test]
+
+If you like to use ipython you can install it with the dev
+requirement::
+
+    .virtual/bin/easy_install tempdirs[dev]
+
+Testing
+-------
+
+To run the unit-tests run the following command from the project's
+base directory::
+
+    .virtual/bin/nosetests
