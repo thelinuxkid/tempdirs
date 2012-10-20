@@ -12,10 +12,13 @@ automatically deleted. It was created as a testing utility.
 Installation
 ============
 
-You can use pip or easy_install
+Install using pip::
 
-- pip install tempdirs
-- easy_install tempdirs
+    pip install pyusps
+
+or easy_install::
+
+    easy_install pyusps
 
 Examples
 ========
