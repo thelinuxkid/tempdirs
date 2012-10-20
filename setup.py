@@ -11,7 +11,6 @@ setup(
         'directories are automatically deleted. It was created as a '
         'testing utility.'
         ),
-    license='GPL',
     author='Andres Buritica',
     author_email='andres@thelinuxkid.com',
     maintainer='Andres Buritica',
@@ -19,4 +18,12 @@ setup(
     url='https://github.com/thelinuxkid/tempdirs',
     packages = find_packages(),
     py_modules=['tempdirs'],
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'Natural Language :: English',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2.7'
+    ],
 )
