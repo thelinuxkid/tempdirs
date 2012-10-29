@@ -74,19 +74,3 @@ https://github.com/thelinuxkid/tempdirs::
     virtualenv .virtual
     # I leave the magic to Ruby developers (.virtual/bin/activate)
     .virtual/bin/python setup.py develop
-    # At this point, tempdirs will already be in easy-install.pth.
-    # So, pip will not attempt to download it
-    .virtual/bin/pip install tempdirs[test]
-
-If you like to use ipython you can install it with the dev
-requirement::
-
-    .virtual/bin/pip install tempdirs[dev]
-
-Testing
--------
-
-To run the unit-tests run the following command from the project's
-base directory::
-
-    .virtual/bin/nosetests
