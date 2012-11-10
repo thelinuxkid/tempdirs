@@ -10,7 +10,7 @@ with open(path) as fp:
 
 setup(
     name='tempdirs',
-    version='0.0.7.1',
+    version='0.0.8',
     description='tempdirs -- Safely create temporary directories',
     long_description=long_description,
     author='Andres Buritica',
