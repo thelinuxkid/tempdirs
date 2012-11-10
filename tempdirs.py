@@ -40,9 +40,8 @@ class makedirs(DecoratorContext):
         self._num = num
 
     def decorated_fn(self, fn, *args, **kwargs):
-        extra_args = list(args)
-        extra_args = self._dirs + extra_args
-        return fn(*extra_args, **kwargs)
+        kwargs['tempdirs_dirs'] = self._dirs
+        return fn(*args, **kwargs)
 
     def __enter__(self):
         self._dirs = [
