@@ -31,7 +31,8 @@ temporary directories needed::
     import tempdirs
 
     @tempdirs.makedirs(2)
-    def test_foo(srcdir, dstdir):
+    def test_foo(**kwargs):
+        (srcdir, dstdir) = kwargs['tempdirs_dirs']
         srcfile = os.path.join(srcdir,'foo')
         dstfile = os.path.join(dstdir,'bar')
         with open(srcfile, 'w') as fp:
